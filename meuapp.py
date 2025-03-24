@@ -41,43 +41,43 @@ tabs = st.tabs(["🏠 Home", "👥 Equipe", "📅 Cronograma", "📌 Atualizaç�
 with tabs[0]:
     st.markdown("""
     <style>
-    .img-float-right {
+    .float-right {
         float: right;
         margin-left: 20px;
         margin-bottom: 20px;
-        clear: right;
     }
     .text-content {
-        text-align: justify;
+        overflow: auto;
     }
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown("""
-    <div class="text-content">
-        <h1>Bem-vindo(a) à página do Projeto de Oficina!</h1>
-    </div>
-    """, unsafe_allow_html=True)
+    # Container principal para o conteúdo
+    st.markdown('<div class="text-content">', unsafe_allow_html=True)
     
-    # Imagem com container flutuante
-    st.markdown('<div class="img-float-right">', unsafe_allow_html=True)
+    # Título
+    st.markdown("<h1>Bem-vindo(a) à página do Projeto de Oficina!</h1>", unsafe_allow_html=True)
+    
+    # Imagem flutuante à direita
+    st.markdown('<div class="float-right">', unsafe_allow_html=True)
     st.image("image/luizao.png", caption="Logo do Projeto", width=300)
     st.markdown('</div>', unsafe_allow_html=True)
     
+    # Texto principal
     st.markdown("""
-    <div class="text-content">
-        <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração, realizado por:</p>
-        <ul>
-            <li>Bryan A. L. Brantl</li>
-            <li>Joao R. Klassen</li>
-            <li>Leonardo Amancio</li>
-            <li>Luiz Prado Oliveira</li>
-        </ul>
-        <h2>O processo de criação:</h2>
-        <p>O projeto foi desenvolvido utilizando o framework Streamlit, com integração ao GitHub para facilitar o versionamento e colaboração. 
-        A interface foi estilizada com HTML e CSS personalizados, garantindo uma navegação intuitiva e atraente.</p>
-    </div>
+    <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração, realizado por:</p>
+    <ul>
+        <li>Bryan A. L. Brantl</li>
+        <li>Joao R. Klassen</li>
+        <li>Leonardo Amancio</li>
+        <li>Luiz Prado Oliveira</li>
+    </ul>
+    <h2>O processo de criação:</h2>
+    <p>O projeto foi desenvolvido utilizando o framework Streamlit, com integração ao GitHub para facilitar o versionamento e colaboração. 
+    A interface foi estilizada com HTML e CSS personalizados, garantindo uma navegação intuitiva e atraente.</p>
     """, unsafe_allow_html=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True)  # Fecha o container principal
 
 # ✅ ABA CRONOGRAMA
 with tabs[2]:
