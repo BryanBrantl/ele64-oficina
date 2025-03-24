@@ -100,7 +100,6 @@ with tabs[0]:
     </div>
     """, unsafe_allow_html=True)
 with tabs[1]:
-st.title("Monitoramento Remoto de Sinais Vitais")
 st.markdown("""
     **Objetivo**: Acompanhar pacientes em tempo real, garantindo atendimento rápido em emergências.
 """)
