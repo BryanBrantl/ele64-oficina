@@ -26,7 +26,39 @@ st.markdown("""
             font-size: 18px;
             line-height: 1.6;
         }
+        .nav-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #1e1e1e;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .nav-item {
+            padding: 10px 20px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-item:hover {
+            background-color: #333;
+        }
+        .nav-active {
+            background-color: #ff4b4b;
+            color: white;
+        }
     </style>
+""", unsafe_allow_html=True)
+
+# 🔥 Barra de navegação
+st.markdown("""
+    <div class="nav-bar">
+        <a href="#" class="nav-item nav-active">🏠 Home</a>
+        <a href="#" class="nav-item">📖 Trajetória Pessoal</a>
+        <a href="#" class="nav-item">💼 Trajetória Profissional</a>
+        <a href="#" class="nav-item">👤 Currículo</a>
+        <a href="#" class="nav-item">✉️ Contato</a>
+    </div>
 """, unsafe_allow_html=True)
 
 # 🔥 Criação das abas
