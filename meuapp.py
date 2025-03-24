@@ -39,51 +39,36 @@ tabs = st.tabs(["🏠 Home", "👥 Equipe", "📅 Cronograma", "📌 Atualizaç�
 
 # ✅ ABA HOME
 with tabs[0]:
+    with tabs[0]:
     st.markdown("""
-    <style>
-    .centered-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 20px 0;
-    }
-    .rounded-img {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin: 0 auto;
-    }
-    .caption {
-        text-align: center;
-        font-style: italic;
-        margin-top: 10px;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-    # Título centralizado
-    st.markdown("<h1 style='text-align: center;'>Bem-vindo(a) à página do Projeto de Oficina!</h1>", unsafe_allow_html=True)
-    
-    # Container para imagem e legenda
-    st.markdown("""
-    <div class="centered-container">
-        <img src="image/luizao.png" class="rounded-img" alt="Logo do Projeto">
-        <div class="caption">Logo do Projeto</div>
+    <div style="text-align: center;">
+        <h1>Bem-vindo(a) à página do Projeto de Oficina!</h1>
     </div>
     """, unsafe_allow_html=True)
     
-    # Conteúdo do texto
+    # Imagem centralizada
+    col1, col2, col3 = st.columns([1,2,1])
+    with col2:
+        st.image("image/luizao.png", caption="Logo do Projeto", width=300)
+    
     st.markdown("""
     <div style="text-align: justify;">
         <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração, realizado por:</p>
-        <ul>
-            <li>Bryan A. L. Brantl</li>
-            <li>Joao R. Klassen</li>
-            <li>Leonardo Amancio</li>
-            <li>Luiz Prado Oliveira</li>
-        </ul>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Lista de nomes (formato simples, um por linha)
+    st.markdown("""
+    <div style="text-align: center; margin: 20px 0;">
+        Luiz Prado Oliveira<br>
+        I. Passos A. J. Rizzani<br>
+        Leonardo Amancio<br>
+        I. Joao R. Klassen
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("""
+    <div style="text-align: justify;">
         <h2>O processo de criação:</h2>
         <p>O projeto foi desenvolvido utilizando o framework Streamlit, com integração ao GitHub para facilitar o versionamento e colaboração. 
         A interface foi estilizada com HTML e CSS personalizados, garantindo uma navegação intuitiva e atraente.</p>
