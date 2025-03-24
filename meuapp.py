@@ -35,7 +35,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 🔥 Criação das abas
-tabs = st.tabs(["🏠 Home", "Projetos", "📅 Cronograma", "📌 Atualização Semanal", "🛠️ Materiais e Métodos", "⚠️ Análise de Riscos"])
+tabs = st.tabs(["Home", "Projetos", "Cronograma", " Atualização Semanal", "Materiais e Métodos", "Análise de Riscos"])
 
 # ✅ ABA HOME
 with tabs[0]:
@@ -100,18 +100,24 @@ with tabs[0]:
     </div>
     """, unsafe_allow_html=True)
 with tabs[1]:
-    st.markdown("""
-        <div class="main-content">
-            <h2>Materiais e Métodos</h2>
-            <ul>
-                <li>ESP32</li>
-                <li>Display TFT 1.28" (GC9A01)</li>
-                <li>Sensores</li>
-                <li>Módulos de comunicação sem fio</li>
-            </ul>
-            <p><b>Métodos:</b> Programação em C/C++, uso de bibliotecas específicas para ESP32 e comunicação SPI.</p>
-        </div>
-    """, unsafe_allow_html=True)
+st.title("Monitoramento Remoto de Sinais Vitais")
+st.markdown("""
+    **Objetivo**: Acompanhar pacientes em tempo real, garantindo atendimento rápido em emergências.
+""")
+
+col1, col2 = st.columns(2)
+with col1:
+    st.subheader("Sensores Utilizados")
+    st.write("- Oxímetro (SpO2)")
+    st.write("- ECG (Batimentos Cardíacos)")
+    st.write("- Termômetro (Temperatura Corporal)")
+
+with col2:
+    st.subheader("Tecnologias de Comunicação")
+    st.write("- LoRa (Long Range)")
+    st.write("- GSM (Cobertura Celular)")
+
+st.subheader("Fluxo de Dados")
     
 # ✅ ABA ATUALIZAÇÃO SEMANAL
 with tabs[3]:
