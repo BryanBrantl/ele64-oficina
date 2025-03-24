@@ -103,46 +103,23 @@ with tabs[0]:
 # ✅ ABA PROJETOS
 with tabs[1]:
     st.markdown("""
-    <div class="main-content">
-        <h1>Dispositivo Vestível para Monitoramento Remoto de Sinais Vitais</h1>
-        
-        <h2>🔎 Problema</h2>
-        <p>Em regiões afastadas, o acesso a serviços médicos é limitado. Pacientes com doenças crônicas precisam de acompanhamento constante.</p>
-        
-        <h2>💡 Solução</h2>
-        <p>Um dispositivo vestível que monitora sinais vitais (oxigenação, batimentos cardíacos, temperatura) e transmite os dados via <b>LoRa</b> ou <b>GSM</b> para um centro de saúde.</p>
-        
-        <h2>⚙️ Integração Técnica</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div>
-                <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">⭐ Eletrônica</p>
-                <ul>
-                    <li>Sensores biomédicos</li>
-                    <li>Circuito de aquisição de sinais</li>
-                </ul>
-                
-                <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">⭐ Eletrônica Digital</p>
-                <ul>
-                    <li>Processamento dos dados</li>
-                    <li>Envio de alertas</li>
-                </ul>
-            </div>
-            <div>
-                <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">⭐ Microcontroladores</p>
-                <ul>
-                    <li>ESP32 ou STM32</li>
-                    <li>Comunicação remota</li>
-                </ul>
-                
-                <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">⭐ Computação</p>
-                <ul>
-                    <li>Plataforma Web/App</li>
-                    <li>Monitoramento por médicos</li>
-                </ul>
-            </div>
+        <div class="main-content">
+            <h2>Projeto: Monitoramento Remoto de Saúde</h2>
+            <ul>
+                <li><b>Problema:</b> Em regiões afastadas, o acesso a serviços médicos é limitado. Pacientes com doenças crônicas precisam de acompanhamento constante.</li>
+                <li><b>Solução:</b> Um dispositivo vestível que monitora sinais vitais (oxigenação, batimentos cardíacos, temperatura) e transmite os dados via LoRa ou GSM para um centro de saúde.</li>
+                <li><b>Integração:</b>
+                    <ul>
+                        <li><b>Eletrônica:</b> Sensores biomédicos e circuito de aquisição de sinais.</li>
+                        <li><b>Eletrônica Digital:</b> Processamento dos dados e envio de alertas.</li>
+                        <li><b>Microcontroladores:</b> ESP32 ou STM32 para comunicação remota.</li>
+                        <li><b>Computação:</b> Plataforma Web/App para monitoramento por médicos.</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    </div>
     """, unsafe_allow_html=True)
+
     
 # ✅ ABA ATUALIZAÇÃO SEMANAL
 with tabs[3]:
