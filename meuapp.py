@@ -46,7 +46,7 @@ with tabs[0]:
     """, unsafe_allow_html=True)
     
     # Exibindo a imagem separadamente
-   st.image("image/luizao.png", caption="Logo do Projeto", use_container_width=True)
+    st.image("image/luizao.png", caption="Logo do Projeto", use_container_width=True)
 
     
     st.markdown("""
