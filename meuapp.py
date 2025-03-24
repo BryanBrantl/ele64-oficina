@@ -35,7 +35,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 🔥 Criação das abas
-tabs = st.tabs(["🏠 Home", "👥 Equipe", "📅 Cronograma", "📌 Atualização Semanal", "🛠️ Materiais e Métodos", "⚠️ Análise de Riscos"])
+tabs = st.tabs(["🏠 Home", "Projetos", "📅 Cronograma", "📌 Atualização Semanal", "🛠️ Materiais e Métodos", "⚠️ Análise de Riscos"])
 
 # ✅ ABA HOME
 with tabs[0]:
@@ -99,7 +99,20 @@ with tabs[0]:
         A interface foi estilizada com HTML e CSS personalizados, garantindo uma navegação intuitiva e atraente.</p>
     </div>
     """, unsafe_allow_html=True)
-
+with tabs[1]:
+    st.markdown("""
+        <div class="main-content">
+            <h2>Materiais e Métodos</h2>
+            <ul>
+                <li>ESP32</li>
+                <li>Display TFT 1.28" (GC9A01)</li>
+                <li>Sensores</li>
+                <li>Módulos de comunicação sem fio</li>
+            </ul>
+            <p><b>Métodos:</b> Programação em C/C++, uso de bibliotecas específicas para ESP32 e comunicação SPI.</p>
+        </div>
+    """, unsafe_allow_html=True)
+    
 # ✅ ABA ATUALIZAÇÃO SEMANAL
 with tabs[3]:
     st.markdown("<h2>Atualização Semanal</h2>", unsafe_allow_html=True)
