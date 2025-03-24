@@ -99,24 +99,75 @@ with tabs[0]:
         A interface foi estilizada com HTML e CSS personalizados, garantindo uma navegação intuitiva e atraente.</p>
     </div>
     """, unsafe_allow_html=True)
+
+# ✅ ABA PROJETOS
 with tabs[1]:
-st.markdown("""
-    **Objetivo**: Acompanhar pacientes em tempo real, garantindo atendimento rápido em emergências.
-""")
-
-col1, col2 = st.columns(2)
-with col1:
-    st.subheader("Sensores Utilizados")
-    st.write("- Oxímetro (SpO2)")
-    st.write("- ECG (Batimentos Cardíacos)")
-    st.write("- Termômetro (Temperatura Corporal)")
-
-with col2:
-    st.subheader("Tecnologias de Comunicação")
-    st.write("- LoRa (Long Range)")
-    st.write("- GSM (Cobertura Celular)")
-
-st.subheader("Fluxo de Dados")
+    st.markdown("""
+        <div class="main-content">
+            <h2>Dispositivo Vestível para Monitoramento Remoto de Sinais Vitais</h2>
+            
+            <h3>🔎 Problema</h3>
+            <p>Em regiões afastadas, o acesso a serviços médicos é limitado. Pacientes com doenças crônicas precisam de acompanhamento constante.</p>
+            
+            <h3>💡 Solução</h3>
+            <p>Um dispositivo vestível que monitora sinais vitais (oxigenação, batimentos cardíacos, temperatura) e transmite os dados via <b>LoRa</b> ou <b>GSM</b> para um centro de saúde.</p>
+            
+            <h3>⚙️ Integração</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <h4>🛠 Eletrônica</h4>
+                    <ul>
+                        <li>Sensores biomédicos</li>
+                        <li>Circuito de aquisição de sinais</li>
+                    </ul>
+                    
+                    <h4>💻 Eletrônica Digital</h4>
+                    <ul>
+                        <li>Processamento dos dados</li>
+                        <li>Envio de alertas</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>📡 Microcontroladores</h4>
+                    <ul>
+                        <li>ESP32 ou STM32</li>
+                        <li>Comunicação remota</li>
+                    </ul>
+                    
+                    <h4>🌐 Computação</h4>
+                    <ul>
+                        <li>Plataforma Web/App</li>
+                        <li>Monitoramento por médicos</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>📊 Fluxo de Dados</h3>
+            <div style="text-align: center;">
+                <img src="https://via.placeholder.com/800x400?text=Diagrama+de+Fluxo+do+Sistema" style="max-width: 100%; border-radius: 8px; margin: 10px 0;">
+            </div>
+            
+            <h3>🚀 Próximos Passos</h3>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <div style="background: #2e2e2e; padding: 10px; border-radius: 8px; flex: 1; min-width: 120px;">
+                    ✅ Testar sensores em ambiente controlado
+                </div>
+                <div style="background: #2e2e2e; padding: 10px; border-radius: 8px; flex: 1; min-width: 120px;">
+                    ✅ Desenvolver protótipo do circuito
+                </div>
+                <div style="background: #2e2e2e; padding: 10px; border-radius: 8px; flex: 1; min-width: 120px;">
+                    ✅ Implementar comunicação LoRa/GSM
+                </div>
+                <div style="background: #2e2e2e; padding: 10px; border-radius: 8px; flex: 1; min-width: 120px;">
+                    ✅ Criar dashboard de monitoramento
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px; text-align: center; font-style: italic; color: #666;">
+                Desenvolvido para melhorar o acesso à saúde em áreas remotas. 🚑
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
     
 # ✅ ABA ATUALIZAÇÃO SEMANAL
 with tabs[3]:
