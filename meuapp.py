@@ -1,51 +1,18 @@
 import streamlit as st
 
-# 🔥 Definir configurações da página
+# 🔥 Definir configurações da página (primeira linha obrigatoriamente)
 st.set_page_config(page_title="Projeto de Oficina", layout="wide")
 
 # 🔥 Estilo personalizado com CSS
 st.markdown("""
     <style>
-        /* Estilo da barra de navegação */
-        .navbar {
-            background-color: #1c1c1c;
-            padding: 15px;
-            border-radius: 12px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-        .navbar a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .navbar a:hover {
-            background-color: #ff4b4b;
-            color: #ffffff;
-        }
-        .active {
-            background-color: #ff4b4b;
-            color: #ffffff;
-        }
-        /* Estilo do conteúdo principal */
-        .main-content {
-            background-color: #0e0e0e;
-            color: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
-        }
+        /* Estilo para o título principal */
         h1 {
             color: #ffffff;
             font-size: 42px;
             font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
         }
         h2 {
             color: #ffffff;
@@ -53,35 +20,28 @@ st.markdown("""
             font-weight: bold;
             margin-top: 20px;
         }
-        p {
+        p, li {
             font-size: 18px;
             line-height: 1.6;
             color: #b0b0b0;
         }
+        .main-content {
+            background-color: #0e0e0e;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+        }
     </style>
 """, unsafe_allow_html=True)
 
-# 🔥 Barra de navegação com botões
-menu = st.markdown("""
-    <div class="navbar">
-        <a href="?page=home" class="active">🏠 Home</a>
-        <a href="?page=equipe">👥 Equipe</a>
-        <a href="?page=cronograma">📅 Cronograma</a>
-        <a href="?page=atualizacao">📌 Atualização</a>
-        <a href="?page=materiais">🛠️ Materiais e Métodos</a>
-        <a href="?page=riscos">⚠️ Análise de Riscos</a>
-    </div>
-""", unsafe_allow_html=True)
+# 🔥 Criação das abas
+tabs = st.tabs(["🏠 Home", "👥 Equipe", "📅 Cronograma", "📌 Atualização Semanal", "🛠️ Materiais e Métodos", "⚠️ Análise de Riscos"])
 
-# 🔥 Definir página com base na URL
-query_params = st.query_params
-page = query_params.get("page", ["home"])[0]
-
-# 🔥 Página Home
-if page == "home":
+# ✅ ABA HOME
+with tabs[0]:
     st.markdown("""
         <div class="main-content">
-            <h1>Bem-vindo(a) à minha página pessoal!</h1>
+            <h1>Bem-vindo(a) à página do Projeto de Oficina!</h1>
             <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração, realizado por:</p>
             <ul>
                 <li>Bryan A. L. Brantl</li>
@@ -95,67 +55,86 @@ if page == "home":
         </div>
     """, unsafe_allow_html=True)
 
-# 🔥 Página Equipe
-elif page == "equipe":
-    st.title("Equipe")
-    st.write("""
-    - **Bryan A. L. Brantl**  
-    - **Joao R. Klassen**  
-    - **Leonardo Amancio**  
-    - **Luiz Prado Oliveira**  
-    """)
+# ✅ ABA EQUIPE
+with tabs[1]:
+    st.markdown("""
+        <div class="main-content">
+            <h2>Equipe do Projeto</h2>
+            <ul>
+                <li><b>Bryan A. L. Brantl</b></li>
+                <li><b>Joao R. Klassen</b></li>
+                <li><b>Leonardo Amancio</b></li>
+                <li><b>Luiz Prado Oliveira</b></li>
+            </ul>
+        </div>
+    """, unsafe_allow_html=True)
 
-# 🔥 Página Cronograma
-elif page == "cronograma":
-    st.title("Cronograma")
-    st.write("""
-    | Fase | Descrição | Data de Início | Data de Término |
-    |-------|-----------|----------------|-----------------|
-    | Fase 1 | Definição de requisitos | DD/MM/YYYY | DD/MM/YYYY |
-    | Fase 2 | Desenvolvimento inicial | DD/MM/YYYY | DD/MM/YYYY |
-    | Fase 3 | Testes e ajustes | DD/MM/YYYY | DD/MM/YYYY |
-    | Fase 4 | Entrega final | DD/MM/YYYY | DD/MM/YYYY |
-    """)
+# ✅ ABA CRONOGRAMA
+with tabs[2]:
+    st.markdown("""
+        <div class="main-content">
+            <h2>Cronograma do Projeto</h2>
+            <table style="width:100%; border-collapse: collapse; color: #b0b0b0;">
+                <tr>
+                    <th style="border: 1px solid #444; padding: 8px; background-color: #222;">Fase</th>
+                    <th style="border: 1px solid #444; padding: 8px; background-color: #222;">Descrição</th>
+                    <th style="border: 1px solid #444; padding: 8px; background-color: #222;">Data de Início</th>
+                    <th style="border: 1px solid #444; padding: 8px; background-color: #222;">Data de Término</th>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #444; padding: 8px;">Fase 1</td>
+                    <td style="border: 1px solid #444; padding: 8px;">Definição de Requisitos</td>
+                    <td style="border: 1px solid #444; padding: 8px;">DD/MM/YYYY</td>
+                    <td style="border: 1px solid #444; padding: 8px;">DD/MM/YYYY</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #444; padding: 8px;">Fase 2</td>
+                    <td style="border: 1px solid #444; padding: 8px;">Desenvolvimento Inicial</td>
+                    <td style="border: 1px solid #444; padding: 8px;">DD/MM/YYYY</td>
+                    <td style="border: 1px solid #444; padding: 8px;">DD/MM/YYYY</td>
+                </tr>
+            </table>
+        </div>
+    """, unsafe_allow_html=True)
 
-# 🔥 Página Atualização Semanal
-elif page == "atualizacao":
-    st.title("Atualização Semanal")
+# ✅ ABA ATUALIZAÇÃO SEMANAL
+with tabs[3]:
+    st.markdown("<h2>Atualização Semanal</h2>", unsafe_allow_html=True)
     semana = st.text_input("Semana", "")
     atualizacao = st.text_area("Atualização", "")
     if st.button("Salvar Atualização"):
         st.success("Atualização salva com sucesso!")
 
-# 🔥 Página Materiais e Métodos
-elif page == "materiais":
-    st.title("Materiais e Métodos")
-    st.write("""
-    **Materiais Utilizados:**  
-    - ESP32  
-    - Display TFT 1.28" (GC9A01)  
-    - Sensores  
-    - Módulos de comunicação sem fio  
+# ✅ ABA MATERIAIS E MÉTODOS
+with tabs[4]:
+    st.markdown("""
+        <div class="main-content">
+            <h2>Materiais e Métodos</h2>
+            <ul>
+                <li>ESP32</li>
+                <li>Display TFT 1.28" (GC9A01)</li>
+                <li>Sensores</li>
+                <li>Módulos de comunicação sem fio</li>
+            </ul>
+            <p><b>Métodos:</b> Programação em C/C++, uso de bibliotecas específicas para ESP32 e comunicação SPI.</p>
+        </div>
+    """, unsafe_allow_html=True)
 
-    **Métodos:**  
-    - Programação em C/C++  
-    - Uso de bibliotecas específicas para ESP32  
-    - Comunicação SPI  
-    """)
-
-# 🔥 Página Análise de Riscos
-elif page == "riscos":
-    st.title("Análise de Riscos")
-    st.write("""
-    **Riscos Técnicos:**  
-    - Falha na comunicação com sensores  
-    - Problemas de compatibilidade com bibliotecas  
-
-    **Riscos de Projeto:**  
-    - Atrasos no cronograma  
-    - Falta de componentes críticos  
-
-    **Mitigação:**  
-    - Testes antecipados  
-    - Backup de componentes e bibliotecas  
-    - Revisões semanais  
-    """)
-
+# ✅ ABA ANÁLISE DE RISCOS
+with tabs[5]:
+    st.markdown("""
+        <div class="main-content">
+            <h2>Análise de Riscos</h2>
+            <p><b>Riscos Técnicos:</b></p>
+            <ul>
+                <li>Falha na comunicação com sensores</li>
+                <li>Problemas de compatibilidade com bibliotecas</li>
+            </ul>
+            <p><b>Riscos de Projeto:</b></p>
+            <ul>
+                <li>Atrasos no cronograma</li>
+                <li>Falta de componentes críticos</li>
+            </ul>
+            <p><b>Mitigação:</b> Testes antecipados, backup de componentes e revisões semanais.</p>
+        </div>
+    """, unsafe_allow_html=True)
