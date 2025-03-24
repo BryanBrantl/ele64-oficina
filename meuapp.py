@@ -45,19 +45,19 @@ with tabs[0]:
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        st.image("image/bryan.png", width=150)
+        st.image("image/luizao.png", width=150)
         st.markdown("<p style='text-align: center;'>Bryan A. L. Brantl</p>", unsafe_allow_html=True)
     
     with col2:
-        st.image("image/joao.png", width=150)
+        st.image("image/luizao.png", width=150)
         st.markdown("<p style='text-align: center;'>Joao R. Klassen</p>", unsafe_allow_html=True)
     
     with col3:
-        st.image("image/leonardo.png", width=150)
+        st.image("image/luizao.png", width=150)
         st.markdown("<p style='text-align: center;'>Leonardo Amancio</p>", unsafe_allow_html=True)
     
     with col4:
-        st.image("image/luiz.png", width=150)
+        st.image("image/luizao.png", width=150)
         st.markdown("<p style='text-align: center;'>Luiz Prado Oliveira</p>", unsafe_allow_html=True)
     
     st.markdown("""
