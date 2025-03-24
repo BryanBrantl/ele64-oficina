@@ -41,29 +41,40 @@ tabs = st.tabs(["🏠 Home", "👥 Equipe", "📅 Cronograma", "📌 Atualizaç�
 with tabs[0]:
     st.markdown("""
     <style>
+    .centered-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+    }
     .rounded-img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         object-fit: cover;
         border-radius: 50%;
+        margin: 0 auto;
     }
-    .img-container {
+    .caption {
         text-align: center;
-        margin-bottom: 20px;
+        font-style: italic;
+        margin-top: 10px;
     }
     </style>
     """, unsafe_allow_html=True)
 
+    # Título centralizado
     st.markdown("<h1 style='text-align: center;'>Bem-vindo(a) à página do Projeto de Oficina!</h1>", unsafe_allow_html=True)
     
-    st.markdown('<div class="img-container">', unsafe_allow_html=True)
-    st.markdown('<img src="image/luizao.png" class="rounded-img" alt="Logo do Projeto">', unsafe_allow_html=True)
-    st.markdown('<p style="text-align: center;"><em>Logo do Projeto</em></p>', unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+    # Container para imagem e legenda
+    st.markdown("""
+    <div class="centered-container">
+        <img src="image/luizao.png" class="rounded-img" alt="Logo do Projeto">
+        <div class="caption">Logo do Projeto</div>
+    </div>
+    """, unsafe_allow_html=True)
     
+    # Conteúdo do texto
     st.markdown("""
     <div style="text-align: justify;">
         <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração, realizado por:</p>
