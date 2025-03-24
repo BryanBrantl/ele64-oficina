@@ -39,35 +39,31 @@ tabs = st.tabs(["🏠 Home", "👥 Equipe", "📅 Cronograma", "📌 Atualizaç�
 
 # ✅ ABA HOME
 with tabs[0]:
-    st.markdown("""
-    <div style="text-align: center;">
-        <h1>Bem-vindo(a) à página do Projeto de Oficina!</h1>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Bem-vindo(a) à página do Projeto de Oficina!</h1>", unsafe_allow_html=True)
     
-    # Imagem centralizada
-    col1, col2, col3 = st.columns([1,2,1])
+    # Container para as 4 imagens
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.image("image/bryan.png", width=150)
+        st.markdown("<p style='text-align: center;'>Bryan A. L. Brantl</p>", unsafe_allow_html=True)
+    
     with col2:
-        st.image("image/luizao.png", caption="Logo do Projeto", width=300)
+        st.image("image/joao.png", width=150)
+        st.markdown("<p style='text-align: center;'>Joao R. Klassen</p>", unsafe_allow_html=True)
+    
+    with col3:
+        st.image("image/leonardo.png", width=150)
+        st.markdown("<p style='text-align: center;'>Leonardo Amancio</p>", unsafe_allow_html=True)
+    
+    with col4:
+        st.image("image/luiz.png", width=150)
+        st.markdown("<p style='text-align: center;'>Luiz Prado Oliveira</p>", unsafe_allow_html=True)
     
     st.markdown("""
-    <div style="text-align: justify;">
-        <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração, realizado por:</p>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    # Lista de nomes (formato simples, um por linha)
-    st.markdown("""
-    <div style="text-align: center; margin: 20px 0;">
-        Luiz Prado Oliveira<br>
-        I. Passos A. J. Rizzani<br>
-        Leonardo Amancio<br>
-        I. Joao R. Klassen
-    </div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("""
-    <div style="text-align: justify;">
+    <div style='text-align: justify; margin-top: 30px;'>
+        <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração.</p>
+        
         <h2>O processo de criação:</h2>
         <p>O projeto foi desenvolvido utilizando o framework Streamlit, com integração ao GitHub para facilitar o versionamento e colaboração. 
         A interface foi estilizada com HTML e CSS personalizados, garantindo uma navegação intuitiva e atraente.</p>
