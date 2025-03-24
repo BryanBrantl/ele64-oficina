@@ -106,13 +106,13 @@ with tabs[1]:
         <div class="main-content">
             <h2>Dispositivo Vestível para Monitoramento Remoto de Sinais Vitais</h2>
             
-            <h3>🔎 Problema</h3>
+            <h2>🔎 Problema</h2>
             <p>Em regiões afastadas, o acesso a serviços médicos é limitado. Pacientes com doenças crônicas precisam de acompanhamento constante.</p>
             
-            <h3>💡 Solução</h3>
+            <h2>💡 Solução</h2>
             <p>Um dispositivo vestível que monitora sinais vitais (oxigenação, batimentos cardíacos, temperatura) e transmite os dados via <b>LoRa</b> ou <b>GSM</b> para um centro de saúde.</p>
             
-            <h3>⚙️ Integração</h3>
+            <h2>⚙️ Integração</h2>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                 <div>
                     <h4>🛠 Eletrônica</h4>
