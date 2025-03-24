@@ -45,7 +45,7 @@ with tabs[0]:
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        st.image("image/bryan.png", width=150)
+        st.image("image/luizao.png", width=150)
         st.markdown("""
         <div style='text-align: center;'>
             <p style='font-weight: bold; margin-bottom: 5px;'>Bryan A. L. Brantl</p>
@@ -57,7 +57,7 @@ with tabs[0]:
         """, unsafe_allow_html=True)
     
     with col2:
-        st.image("image/joao.png", width=150)
+        st.image("image/luizao.png", width=150)
         st.markdown("""
         <div style='text-align: center;'>
             <p style='font-weight: bold; margin-bottom: 5px;'>Joao R. Klassen</p>
@@ -69,7 +69,7 @@ with tabs[0]:
         """, unsafe_allow_html=True)
     
     with col3:
-        st.image("image/leonardo.png", width=150)
+        st.image("image/luizao.png", width=150)
         st.markdown("""
         <div style='text-align: center;'>
             <p style='font-weight: bold; margin-bottom: 5px;'>Leonardo Amancio</p>
@@ -81,7 +81,7 @@ with tabs[0]:
         """, unsafe_allow_html=True)
     
     with col4:
-        st.image("image/luiz.png", width=150)
+        st.image("image/luizao.png", width=150)
         st.markdown("""
         <div style='text-align: center;'>
             <p style='font-weight: bold; margin-bottom: 5px;'>Luiz Prado Oliveira</p>
