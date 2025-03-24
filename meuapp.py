@@ -42,6 +42,7 @@ with tabs[0]:
     st.markdown("""
         <div class="main-content">
             <h1>Bem-vindo(a) à página do Projeto de Oficina!</h1>
+            st.image("image/luizao.png", caption="Logo do Projeto", use_column_width=True)
             <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração, realizado por:</p>
             <ul>
                 <li>Bryan A. L. Brantl</li>
