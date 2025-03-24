@@ -104,7 +104,7 @@ with tabs[0]:
 with tabs[1]:
     st.markdown("""
         <div class="main-content">
-            <h2>Projeto: Monitoramento Remoto de Saúde</h2>
+            <h2>Projeto 01: Monitoramento Remoto de Saúde</h2>
             <ul>
                 <li><b>Problema:</b> Em regiões afastadas, o acesso a serviços médicos é limitado. Pacientes com doenças crônicas precisam de acompanhamento constante.</li>
                 <li><b>Solução:</b> Um dispositivo vestível que monitora sinais vitais (oxigenação, batimentos cardíacos, temperatura) e transmite os dados via LoRa ou GSM para um centro de saúde.</li>
@@ -118,6 +118,21 @@ with tabs[1]:
                 </li>
             </ul>
         </div>
+            <h2>Projeto 02: Sistema de Alerta para Epilepsia com Comunicação de Emergência</h2>
+            <ul>
+                <li><b>Problema:</b> Pessoas com epilepsia podem sofrer crises sem aviso, e um atendimento rápido pode salvar vidas.</li>
+                <li><b>Solução:</b> Um dispositivo vestível com sensores de movimento e frequência cardíaca que detecta crises epilépticas e envia um alerta automático via SMS/WhatsApp para familiares e serviços de emergência.</li>
+                <li><b>Integração:</b>
+                    <ul>
+                        <li><b>Eletrônica:</b> Sensores IMU (acelerômetro/giroscópio) e PPG (frequência cardíaca).</li>
+                        <li><b>Eletrônica Digital:</b> Algoritmo para detecção de crises.</li>
+                        <li><b>Microcontroladores:</b> ESP32 ou módulo GSM para comunicação.</li>
+                        <li><b>Computação:</b> Aplicação Web/App para monitoramento e notificações.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+            
     """, unsafe_allow_html=True)
 
     
