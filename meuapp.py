@@ -40,42 +40,43 @@ tabs = st.tabs(["🏠 Home", "👥 Equipe", "📅 Cronograma", "📌 Atualizaç�
 # ✅ ABA HOME
 with tabs[0]:
     st.markdown("""
-        <div class="main-content">
-            <h1>Bem-vindo(a) à página do Projeto de Oficina!</h1>
-        </div>
+    <style>
+    .img-float-right {
+        float: right;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        clear: right;
+    }
+    .text-content {
+        text-align: justify;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class="text-content">
+        <h1>Bem-vindo(a) à página do Projeto de Oficina!</h1>
+    </div>
     """, unsafe_allow_html=True)
     
-    # Exibindo a imagem separadamente
+    # Imagem com container flutuante
+    st.markdown('<div class="img-float-right">', unsafe_allow_html=True)
     st.image("image/luizao.png", caption="Logo do Projeto", width=300)
-
+    st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown("""
-        <div class="main-content">
-            <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração, realizado por:</p>
-            <ul>
-                <li>Bryan A. L. Brantl</li>
-                <li>Joao R. Klassen</li>
-                <li>Leonardo Amancio</li>
-                <li>Luiz Prado Oliveira</li>
-            </ul>
-            <h2>O processo de criação:</h2>
-            <p>O projeto foi desenvolvido utilizando o framework Streamlit, com integração ao GitHub para facilitar o versionamento e colaboração. 
-            A interface foi estilizada com HTML e CSS personalizados, garantindo uma navegação intuitiva e atraente.</p>
-        </div>
-    """, unsafe_allow_html=True)
-
-# ✅ ABA EQUIPE
-with tabs[1]:
-    st.markdown("""
-        <div class="main-content">
-            <h2>Equipe do Projeto</h2>
-            <ul>
-                <li><b>Bryan A. L. Brantl</b></li>
-                <li><b>Joao R. Klassen</b></li>
-                <li><b>Leonardo Amancio</b></li>
-                <li><b>Luiz Prado Oliveira</b></li>
-            </ul>
-        </div>
+    <div class="text-content">
+        <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração, realizado por:</p>
+        <ul>
+            <li>Bryan A. L. Brantl</li>
+            <li>Joao R. Klassen</li>
+            <li>Leonardo Amancio</li>
+            <li>Luiz Prado Oliveira</li>
+        </ul>
+        <h2>O processo de criação:</h2>
+        <p>O projeto foi desenvolvido utilizando o framework Streamlit, com integração ao GitHub para facilitar o versionamento e colaboração. 
+        A interface foi estilizada com HTML e CSS personalizados, garantindo uma navegação intuitiva e atraente.</p>
+    </div>
     """, unsafe_allow_html=True)
 
 # ✅ ABA CRONOGRAMA
