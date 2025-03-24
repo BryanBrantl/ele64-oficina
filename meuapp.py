@@ -39,7 +39,6 @@ tabs = st.tabs(["🏠 Home", "👥 Equipe", "📅 Cronograma", "📌 Atualizaç�
 
 # ✅ ABA HOME
 with tabs[0]:
-    with tabs[0]:
     st.markdown("""
     <div style="text-align: center;">
         <h1>Bem-vindo(a) à página do Projeto de Oficina!</h1>
