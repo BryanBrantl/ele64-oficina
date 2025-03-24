@@ -103,7 +103,6 @@ with tabs[0]:
 # ✅ ABA PROJETOS
 with tabs[1]:
     st.markdown("""
-        <div class="main-content">
             <h2>Projeto 01: Monitoramento Remoto de Saúde</h2>
             <ul>
                 <li><b>Problema:</b> Em regiões afastadas, o acesso a serviços médicos é limitado. Pacientes com doenças crônicas precisam de acompanhamento constante.</li>
