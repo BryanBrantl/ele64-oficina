@@ -103,70 +103,45 @@ with tabs[0]:
 # ✅ ABA PROJETOS
 with tabs[1]:
     st.markdown("""
-        <div class="main-content">
-            <h1>Dispositivo Vestível para Monitoramento Remoto de Sinais Vitais</h1>
-            
-            <h2>🔎 Problema</h2>
-            <p>Em regiões afastadas, o acesso a serviços médicos é limitado. Pacientes com doenças crônicas precisam de acompanhamento constante.</p>
-            
-            <h2>💡 Solução</h2>
-            <p>Um dispositivo vestível que monitora sinais vitais (oxigenação, batimentos cardíacos, temperatura) e transmite os dados via <b>LoRa</b> ou <b>GSM</b> para um centro de saúde.</p>
-            
-            <h2>⚙️ Integração Técnica</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <div>
-                    <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">🛠 Eletrônica</p>
-                    <ul>
-                        <li>Sensores biomédicos</li>
-                        <li>Circuito de aquisição de sinais</li>
-                    </ul>
-                    
-                    <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">💻 Eletrônica Digital</p>
-                    <ul>
-                        <li>Processamento dos dados</li>
-                        <li>Envio de alertas</li>
-                    </ul>
-                </div>
-                <div>
-                    <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">📡 Microcontroladores</p>
-                    <ul>
-                        <li>ESP32 ou STM32</li>
-                        <li>Comunicação remota</li>
-                    </ul>
-                    
-                    <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">🌐 Computação</p>
-                    <ul>
-                        <li>Plataforma Web/App</li>
-                        <li>Monitoramento por médicos</li>
-                    </ul>
-                </div>
+    <div class="main-content">
+        <h1>Dispositivo Vestível para Monitoramento Remoto de Sinais Vitais</h1>
+        
+        <h2>🔎 Problema</h2>
+        <p>Em regiões afastadas, o acesso a serviços médicos é limitado. Pacientes com doenças crônicas precisam de acompanhamento constante.</p>
+        
+        <h2>💡 Solução</h2>
+        <p>Um dispositivo vestível que monitora sinais vitais (oxigenação, batimentos cardíacos, temperatura) e transmite os dados via <b>LoRa</b> ou <b>GSM</b> para um centro de saúde.</p>
+        
+        <h2>⚙️ Integração Técnica</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+                <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">⭐ Eletrônica</p>
+                <ul>
+                    <li>Sensores biomédicos</li>
+                    <li>Circuito de aquisição de sinais</li>
+                </ul>
+                
+                <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">⭐ Eletrônica Digital</p>
+                <ul>
+                    <li>Processamento dos dados</li>
+                    <li>Envio de alertas</li>
+                </ul>
             </div>
-            
-            <h2>📊 Fluxo de Dados</h2>
-            <div style="text-align: center;">
-                <img src="https://via.placeholder.com/800x400?text=Diagrama+de+Fluxo+do+Sistema" style="max-width: 100%; border-radius: 8px; margin: 10px 0;">
+            <div>
+                <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">⭐ Microcontroladores</p>
+                <ul>
+                    <li>ESP32 ou STM32</li>
+                    <li>Comunicação remota</li>
+                </ul>
+                
+                <p style="font-weight: bold; color: #ffffff; margin-bottom: 5px;">⭐ Computação</p>
+                <ul>
+                    <li>Plataforma Web/App</li>
+                    <li>Monitoramento por médicos</li>
+                </ul>
             </div>
-            
-            <h2>🚀 Próximos Passos</h2>
-            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                <div style="background: #2e2e2e; padding: 10px; border-radius: 8px; flex: 1; min-width: 120px;">
-                    ✅ Testar sensores em ambiente controlado
-                </div>
-                <div style="background: #2e2e2e; padding: 10px; border-radius: 8px; flex: 1; min-width: 120px;">
-                    ✅ Desenvolver protótipo do circuito
-                </div>
-                <div style="background: #2e2e2e; padding: 10px; border-radius: 8px; flex: 1; min-width: 120px;">
-                    ✅ Implementar comunicação LoRa/GSM
-                </div>
-                <div style="background: #2e2e2e; padding: 10px; border-radius: 8px; flex: 1; min-width: 120px;">
-                    ✅ Criar dashboard de monitoramento
-                </div>
-            </div>
-            
-            <p style="margin-top: 30px; text-align: center; font-style: italic; color: #666;">
-                Desenvolvido para melhorar o acesso à saúde em áreas remotas. 🚑
-            </p>
         </div>
+    </div>
     """, unsafe_allow_html=True)
     
 # ✅ ABA ATUALIZAÇÃO SEMANAL
