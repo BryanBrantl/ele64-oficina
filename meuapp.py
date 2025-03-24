@@ -45,57 +45,59 @@ with tabs[0]:
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        st.image("image/luizao.png", width=150)
-        st.markdown("<p style='text-align: center;'>Bryan A. L. Brantl</p>", unsafe_allow_html=True)
+        st.image("image/bryan.png", width=150)
+        st.markdown("""
+        <div style='text-align: center;'>
+            <p style='font-weight: bold; margin-bottom: 5px;'>Bryan A. L. Brantl</p>
+            <p style='font-size: 14px; margin: 2px;'>Engenharia Eletrônica</p>
+            <p style='font-size: 14px; margin: 2px;'>5º Período</p>
+            <p style='font-size: 14px; margin: 2px;'>bryan.brantl@email.com</p>
+            <p style='font-size: 14px; margin: 2px;'>(31) 98765-4321</p>
+        </div>
+        """, unsafe_allow_html=True)
     
     with col2:
-        st.image("image/luizao.png", width=150)
-        st.markdown("<p style='text-align: center;'>Joao R. Klassen</p>", unsafe_allow_html=True)
+        st.image("image/joao.png", width=150)
+        st.markdown("""
+        <div style='text-align: center;'>
+            <p style='font-weight: bold; margin-bottom: 5px;'>Joao R. Klassen</p>
+            <p style='font-size: 14px; margin: 2px;'>Engenharia Eletrônica</p>
+            <p style='font-size: 14px; margin: 2px;'>7º Período</p>
+            <p style='font-size: 14px; margin: 2px;'>joao.klassen@email.com</p>
+            <p style='font-size: 14px; margin: 2px;'>(31) 91234-5678</p>
+        </div>
+        """, unsafe_allow_html=True)
     
     with col3:
-        st.image("image/luizao.png", width=150)
-        st.markdown("<p style='text-align: center;'>Leonardo Amancio</p>", unsafe_allow_html=True)
+        st.image("image/leonardo.png", width=150)
+        st.markdown("""
+        <div style='text-align: center;'>
+            <p style='font-weight: bold; margin-bottom: 5px;'>Leonardo Amancio</p>
+            <p style='font-size: 14px; margin: 2px;'>Engenharia Eletrônica</p>
+            <p style='font-size: 14px; margin: 2px;'>6º Período</p>
+            <p style='font-size: 14px; margin: 2px;'>leonardo.amancio@email.com</p>
+            <p style='font-size: 14px; margin: 2px;'>(31) 99876-5432</p>
+        </div>
+        """, unsafe_allow_html=True)
     
     with col4:
-        st.image("image/luizao.png", width=150)
-        st.markdown("<p style='text-align: center;'>Luiz Prado Oliveira</p>", unsafe_allow_html=True)
+        st.image("image/luiz.png", width=150)
+        st.markdown("""
+        <div style='text-align: center;'>
+            <p style='font-weight: bold; margin-bottom: 5px;'>Luiz Prado Oliveira</p>
+            <p style='font-size: 14px; margin: 2px;'>Engenharia Eletrônica</p>
+            <p style='font-size: 14px; margin: 2px;'>7º Período</p>
+            <p style='font-size: 14px; margin: 2px;'>luiz.oliveira@email.com</p>
+            <p style='font-size: 14px; margin: 2px;'>(31) 92345-6789</p>
+        </div>
+        """, unsafe_allow_html=True)
     
     st.markdown("""
     <div style='text-align: justify; margin-top: 30px;'>
-        <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração.</p>
-        
         <h2>O processo de criação:</h2>
         <p>O projeto foi desenvolvido utilizando o framework Streamlit, com integração ao GitHub para facilitar o versionamento e colaboração. 
         A interface foi estilizada com HTML e CSS personalizados, garantindo uma navegação intuitiva e atraente.</p>
     </div>
-    """, unsafe_allow_html=True)
-
-# ✅ ABA CRONOGRAMA
-with tabs[2]:
-    st.markdown("""
-        <div class="main-content">
-            <h2>Cronograma do Projeto</h2>
-            <table style="width:100%; border-collapse: collapse; color: #b0b0b0;">
-                <tr>
-                    <th style="border: 1px solid #444; padding: 8px; background-color: #222;">Fase</th>
-                    <th style="border: 1px solid #444; padding: 8px; background-color: #222;">Descrição</th>
-                    <th style="border: 1px solid #444; padding: 8px; background-color: #222;">Data de Início</th>
-                    <th style="border: 1px solid #444; padding: 8px; background-color: #222;">Data de Término</th>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid #444; padding: 8px;">Fase 1</td>
-                    <td style="border: 1px solid #444; padding: 8px;">Definição de Requisitos</td>
-                    <td style="border: 1px solid #444; padding: 8px;">DD/MM/YYYY</td>
-                    <td style="border: 1px solid #444; padding: 8px;">DD/MM/YYYY</td>
-                </tr>
-                <tr>
-                    <td style="border: 1px solid #444; padding: 8px;">Fase 2</td>
-                    <td style="border: 1px solid #444; padding: 8px;">Desenvolvimento Inicial</td>
-                    <td style="border: 1px solid #444; padding: 8px;">DD/MM/YYYY</td>
-                    <td style="border: 1px solid #444; padding: 8px;">DD/MM/YYYY</td>
-                </tr>
-            </table>
-        </div>
     """, unsafe_allow_html=True)
 
 # ✅ ABA ATUALIZAÇÃO SEMANAL
