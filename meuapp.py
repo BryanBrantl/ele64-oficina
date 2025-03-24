@@ -41,43 +41,43 @@ tabs = st.tabs(["🏠 Home", "👥 Equipe", "📅 Cronograma", "📌 Atualizaç�
 with tabs[0]:
     st.markdown("""
     <style>
-    .float-right {
-        float: right;
-        margin-left: 20px;
-        margin-bottom: 20px;
+    .rounded-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
     }
-    .text-content {
-        overflow: auto;
+    .img-container {
+        text-align: center;
+        margin-bottom: 20px;
     }
     </style>
     """, unsafe_allow_html=True)
 
-    # Container principal para o conteúdo
-    st.markdown('<div class="text-content">', unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Bem-vindo(a) à página do Projeto de Oficina!</h1>", unsafe_allow_html=True)
     
-    # Título
-    st.markdown("<h1>Bem-vindo(a) à página do Projeto de Oficina!</h1>", unsafe_allow_html=True)
-    
-    # Imagem flutuante à direita
-    st.markdown('<div class="float-right">', unsafe_allow_html=True)
-    st.image("image/luizao.png", caption="Logo do Projeto", width=300)
+    st.markdown('<div class="img-container">', unsafe_allow_html=True)
+    st.markdown('<img src="image/luizao.png" class="rounded-img" alt="Logo do Projeto">', unsafe_allow_html=True)
+    st.markdown('<p style="text-align: center;"><em>Logo do Projeto</em></p>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
-    # Texto principal
     st.markdown("""
-    <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração, realizado por:</p>
-    <ul>
-        <li>Bryan A. L. Brantl</li>
-        <li>Joao R. Klassen</li>
-        <li>Leonardo Amancio</li>
-        <li>Luiz Prado Oliveira</li>
-    </ul>
-    <h2>O processo de criação:</h2>
-    <p>O projeto foi desenvolvido utilizando o framework Streamlit, com integração ao GitHub para facilitar o versionamento e colaboração. 
-    A interface foi estilizada com HTML e CSS personalizados, garantindo uma navegação intuitiva e atraente.</p>
+    <div style="text-align: justify;">
+        <p>Esta página foi desenvolvida para apresentar o projeto de Oficina de Integração, realizado por:</p>
+        <ul>
+            <li>Bryan A. L. Brantl</li>
+            <li>Joao R. Klassen</li>
+            <li>Leonardo Amancio</li>
+            <li>Luiz Prado Oliveira</li>
+        </ul>
+        <h2>O processo de criação:</h2>
+        <p>O projeto foi desenvolvido utilizando o framework Streamlit, com integração ao GitHub para facilitar o versionamento e colaboração. 
+        A interface foi estilizada com HTML e CSS personalizados, garantindo uma navegação intuitiva e atraente.</p>
+    </div>
     """, unsafe_allow_html=True)
-    
-    st.markdown('</div>', unsafe_allow_html=True)  # Fecha o container principal
 
 # ✅ ABA CRONOGRAMA
 with tabs[2]:
