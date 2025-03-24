@@ -50,17 +50,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 🔥 Barra de navegação
-st.markdown("""
-    <div class="nav-bar">
-        <a href="#" class="nav-item nav-active">🏠 Home</a>
-        <a href="#" class="nav-item">📖 Trajetória Pessoal</a>
-        <a href="#" class="nav-item">💼 Trajetória Profissional</a>
-        <a href="#" class="nav-item">👤 Currículo</a>
-        <a href="#" class="nav-item">✉️ Contato</a>
-    </div>
-""", unsafe_allow_html=True)
-
 # 🔥 Criação das abas
 tabs = st.tabs(["Home", "Projetos", "Cronograma", "Atualização Semanal", "Materiais e Métodos", "Análise de Riscos"])
 
