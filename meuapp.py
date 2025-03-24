@@ -112,14 +112,6 @@ with tabs[1]:
     </div>
     """, unsafe_allow_html=True)
 
-# ✅ ABA ATUALIZAÇÃO SEMANAL
-with tabs[3]:
-    st.markdown("<h2>Atualização Semanal</h2>", unsafe_allow_html=True)
-    semana = st.text_input("Semana")
-    atualizacao = st.text_area("Atualização")
-    if st.button("Salvar Atualização"):
-        st.success("Atualização salva com sucesso!")
-
 # ✅ ABA MATERIAIS E MÉTODOS
 with tabs[4]:
     st.markdown("""
