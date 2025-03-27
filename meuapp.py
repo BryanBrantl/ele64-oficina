@@ -8,7 +8,7 @@ st.markdown("""
     <style>
         body {
             background-color: #121212;
-            color: #ffffff;
+            color: #e0e0e0;
         }
         .main-content {
             background-color: #1e1e1e;
@@ -16,15 +16,18 @@ st.markdown("""
             border-radius: 12px;
             box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
         }
-        h1, h2 {
+        h1, h2, h3 {
             text-align: center;
             font-weight: bold;
+            color: #ff4b4b; /* Vermelho para destaque */
         }
         h1 { font-size: 42px; }
         h2 { font-size: 32px; margin-top: 20px; }
+        h3 { font-size: 24px; }
         p, li {
             font-size: 18px;
             line-height: 1.6;
+            color: #b0b0b0; /* Cinza claro para contraste */
         }
         .nav-bar {
             display: flex;
@@ -36,7 +39,7 @@ st.markdown("""
         .nav-item {
             padding: 10px 20px;
             border-radius: 8px;
-            color: white;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
         }
@@ -66,9 +69,9 @@ with tabs[0]:
     
     for i, col in enumerate(colunas):
         with col:
-            st.image("image/luizao.png", width=150)
+            st.image("image/luizao.png", width=120)  # 🔥 Tamanho da imagem ajustado
             st.markdown(f"""
-                <div style='text-align: center;'>
+                <div style='text-align: center; color: #b0b0b0;'>
                     <p><b>{nomes[i]}</b></p>
                     <p>Engenharia Eletrônica - {periodos[i]} Período</p>
                     <p>{emails[i]}</p>
@@ -98,6 +101,30 @@ with tabs[1]:
             <li><b>Microcontroladores:</b> ESP32 ou STM32 para comunicação remota.</li>
             <li><b>Computação:</b> Plataforma Web/App para monitoramento.</li>
         </ul>
+    </div>
+    """, unsafe_allow_html=True)
+
+# ✅ ABA CRONOGRAMA
+with tabs[2]:
+    st.markdown("""
+    <div class="main-content">
+        <h2>Cronograma</h2>
+        <p>🔴 <b>Janeiro:</b> Definição de escopo e planejamento.</p>
+        <p>🟠 <b>Fevereiro:</b> Desenvolvimento de hardware e firmware.</p>
+        <p>🟡 <b>Março:</b> Testes e integração.</p>
+        <p>🟢 <b>Abril:</b> Validação e documentação final.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+# ✅ ABA ATUALIZAÇÃO SEMANAL
+with tabs[3]:
+    st.markdown("""
+    <div class="main-content">
+        <h2>Atualização Semanal</h2>
+        <p><b>Semana 1:</b> Implementação inicial do hardware.</p>
+        <p><b>Semana 2:</b> Configuração do firmware.</p>
+        <p><b>Semana 3:</b> Comunicação com sensores.</p>
+        <p><b>Semana 4:</b> Testes e ajustes.</p>
     </div>
     """, unsafe_allow_html=True)
 
