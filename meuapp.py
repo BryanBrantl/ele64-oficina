@@ -8,26 +8,26 @@ st.markdown("""
     <style>
         body {
             background-color: #121212;
-            color: #e0e0e0;
+            color: #ffffff;
         }
         .main-content {
             background-color: #1e1e1e;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+            color: #ffffff;
         }
-        h1, h2, h3 {
+        h1, h2 {
             text-align: center;
             font-weight: bold;
-            color: #ff4b4b; /* Vermelho para destaque */
+            color: #ffffff;
         }
         h1 { font-size: 42px; }
         h2 { font-size: 32px; margin-top: 20px; }
-        h3 { font-size: 24px; }
         p, li {
             font-size: 18px;
             line-height: 1.6;
-            color: #b0b0b0; /* Cinza claro para contraste */
+            color: #bbbbbb;
         }
         .nav-bar {
             display: flex;
@@ -50,6 +50,22 @@ st.markdown("""
             background-color: #ff4b4b;
             color: white;
         }
+        .info-box {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.6);
+            margin-top: 20px;
+            color: #ffffff;
+        }
+        .info-box h2 {
+            color: #ff4b4b;
+            font-size: 28px;
+        }
+        .info-box p {
+            color: #bbbbbb;
+            font-size: 16px;
+        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -69,18 +85,19 @@ with tabs[0]:
     
     for i, col in enumerate(colunas):
         with col:
-            st.image("image/luizao.png", width=120)  # 🔥 Tamanho da imagem ajustado
+            st.image("image/luizao.png", width=100)  # 🔥 Ajuste no tamanho da imagem
             st.markdown(f"""
-                <div style='text-align: center; color: #b0b0b0;'>
-                    <p><b>{nomes[i]}</b></p>
-                    <p>Engenharia Eletrônica - {periodos[i]} Período</p>
-                    <p>{emails[i]}</p>
-                    <p>{telefones[i]}</p>
+                <div style='text-align: center;'>
+                    <p><b style='color: #ffffff;'>{nomes[i]}</b></p>
+                    <p style='color: #bbbbbb;'>Engenharia Eletrônica - {periodos[i]} Período</p>
+                    <p style='color: #bbbbbb;'>{emails[i]}</p>
+                    <p style='color: #bbbbbb;'>{telefones[i]}</p>
                 </div>
             """, unsafe_allow_html=True)
     
+    # 🔥 Bloco de informações com contraste melhorado
     st.markdown("""
-    <div class="main-content">
+    <div class="info-box">
         <h2>O Processo de Criação</h2>
         <p>Desenvolvido com Streamlit e integrado ao GitHub para versionamento e colaboração. Interface estilizada com HTML/CSS personalizados.</p>
     </div>
@@ -91,40 +108,16 @@ with tabs[1]:
     st.markdown("""
     <div class="main-content">
         <h2>Projetos</h2>
-        <h3>Monitoramento Remoto de Saúde</h3>
-        <p><b>Problema:</b> Em regiões afastadas, o acesso a serviços médicos é limitado. Pacientes crônicos precisam de acompanhamento constante.</p>
-        <p><b>Solução:</b> Dispositivo vestível monitora sinais vitais (oxigenação, batimentos cardíacos, temperatura) e transmite via LoRa/GSM para centros de saúde.</p>
-        <h3>Integração</h3>
+        <h3 style="color: #ff4b4b;">Monitoramento Remoto de Saúde</h3>
+        <p><b style="color: #ffffff;">Problema:</b> Em regiões afastadas, o acesso a serviços médicos é limitado. Pacientes crônicos precisam de acompanhamento constante.</p>
+        <p><b style="color: #ffffff;">Solução:</b> Dispositivo vestível monitora sinais vitais (oxigenação, batimentos cardíacos, temperatura) e transmite via LoRa/GSM para centros de saúde.</p>
+        <h3 style="color: #ff4b4b;">Integração</h3>
         <ul>
-            <li><b>Eletrônica:</b> Sensores biomédicos e circuito de aquisição de sinais.</li>
-            <li><b>Eletrônica Digital:</b> Processamento de dados e envio de alertas.</li>
-            <li><b>Microcontroladores:</b> ESP32 ou STM32 para comunicação remota.</li>
-            <li><b>Computação:</b> Plataforma Web/App para monitoramento.</li>
+            <li><b style="color: #ffffff;">Eletrônica:</b> Sensores biomédicos e circuito de aquisição de sinais.</li>
+            <li><b style="color: #ffffff;">Eletrônica Digital:</b> Processamento de dados e envio de alertas.</li>
+            <li><b style="color: #ffffff;">Microcontroladores:</b> ESP32 ou STM32 para comunicação remota.</li>
+            <li><b style="color: #ffffff;">Computação:</b> Plataforma Web/App para monitoramento.</li>
         </ul>
-    </div>
-    """, unsafe_allow_html=True)
-
-# ✅ ABA CRONOGRAMA
-with tabs[2]:
-    st.markdown("""
-    <div class="main-content">
-        <h2>Cronograma</h2>
-        <p>🔴 <b>Janeiro:</b> Definição de escopo e planejamento.</p>
-        <p>🟠 <b>Fevereiro:</b> Desenvolvimento de hardware e firmware.</p>
-        <p>🟡 <b>Março:</b> Testes e integração.</p>
-        <p>🟢 <b>Abril:</b> Validação e documentação final.</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-# ✅ ABA ATUALIZAÇÃO SEMANAL
-with tabs[3]:
-    st.markdown("""
-    <div class="main-content">
-        <h2>Atualização Semanal</h2>
-        <p><b>Semana 1:</b> Implementação inicial do hardware.</p>
-        <p><b>Semana 2:</b> Configuração do firmware.</p>
-        <p><b>Semana 3:</b> Comunicação com sensores.</p>
-        <p><b>Semana 4:</b> Testes e ajustes.</p>
     </div>
     """, unsafe_allow_html=True)
 
