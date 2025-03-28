@@ -86,7 +86,7 @@ with tabs[0]:
 
     for i, col in enumerate(colunas):
         with col:
-            st.image(imagens[i], width=150)  # 🔥 Imagem maior
+            st.image(imagens[i], width=300)  # 🔥 Imagem maior
             st.markdown(f"""
                 <div style='text-align: center;'>
                     <p><b style='color: #ffffff; font-size: 18px;'>{nomes[i]}</b></p>
