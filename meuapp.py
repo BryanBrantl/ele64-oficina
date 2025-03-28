@@ -127,6 +127,8 @@ with tabs[1]:
             <li><b style="color: #ffffff;">Microcontroladores:</b> ESP32 ou STM32 para comunicação remota.</li>
             <li><b style="color: #ffffff;">Computação:</b> Plataforma Web/App para monitoramento.</li>
         </ul>
+        <h3 style="color: #ff4b4b;">Proposta 2</h3>
+        <h3 style="color: #ff4b4b;">Proposta 3</h3>
     </div>
     """, unsafe_allow_html=True)
 
