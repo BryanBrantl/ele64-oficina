@@ -82,10 +82,10 @@ with tabs[0]:
     periodos = ["5º", "7º", "6º", "7º"]
     emails = ["bryan.brantl@email.com", "joao.klassen@email.com", "leonardo.amancio@email.com", "luiz.oliveira@email.com"]
     telefones = ["(31) 98765-4321", "(31) 91234-5678", "(31) 99876-5432", "(31) 92345-6789"]
-    
+    imagens= ["image/MEMBRO 04.png", "image/luizao.png","image/MEMBRO 04.png", "image/luizao.png"]
     for i, col in enumerate(colunas):
         with col:
-            st.image("image/luizao.png", width=100)  # 🔥 Ajuste no tamanho da imagem
+            st.image(imagens[i], width=100)  # 🔥 Ajuste no tamanho da imagem
             st.markdown(f"""
                 <div style='text-align: center;'>
                     <p><b style='color: #ffffff;'>{nomes[i]}</b></p>
