@@ -119,7 +119,7 @@ with tabs[1]:
         <h2>Projetos</h2>
         <h3 style="color: #ff4b4b;">Proposta 01: Monitoramento Remoto de Saúde</h3>
         <p><b style="color: #ffffff;">Problema:</b> Em regiões afastadas, o acesso a serviços médicos é limitado. Pacientes crônicos precisam de acompanhamento constante.</p>
-        <p><b style="color: #ffffff;">Solução:</b> Dispositivo vestível monitora sinais vitais (oxigenação, batimentos cardíacos, temperatura) e transmite via LoRa/GSM para centros de saúde.</p>
+        <p><b style="color: #ffffff;">Solução:</b> Dispositivo vestível monitora sinais vitais (oxigenação, batimentos cardíacos, temperatura) e transmite via LoRa/GSM/WiFi para centros de saúde.</p>
         <h3 style="color: #ff4b4b;">Integração</h3>
         <ul>
             <li><b style="color: #ffffff;">Eletrônica:</b> Sensores biomédicos e circuito de aquisição de sinais.</li>
