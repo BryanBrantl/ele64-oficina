@@ -74,7 +74,7 @@ tabs = st.tabs(["Home", "Projetos", "Cronograma", "Atualização Semanal", "Mate
 
 # ✅ ABA HOME
 with tabs[0]:
-    st.markdown("<h1>Bem-vindo(a) ao Projeto de Oficina!</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Bem-vindo(a) ao Projeto de Oficina!</h1>", unsafe_allow_html=True)
     
     # Container para as 4 imagens
     colunas = st.columns(4)
@@ -82,26 +82,34 @@ with tabs[0]:
     periodos = ["5º", "7º", "6º", "7º"]
     emails = ["bryan.brantl@email.com", "joao.klassen@email.com", "leonardo.amancio@email.com", "luiz.oliveira@email.com"]
     telefones = ["(31) 98765-4321", "(31) 91234-5678", "(31) 99876-5432", "(31) 92345-6789"]
-    imagens= ["image/MEMBRO 04.png", "image/luizao.png","image/MEMBRO 04.png", "image/luizao.png"]
+    imagens = ["image/foto_01.png", "image/foto_02.png", "image/foto_03.png", "image/foto_04.png"]
+
     for i, col in enumerate(colunas):
         with col:
-            st.image(imagens[i], width=100)  # 🔥 Ajuste no tamanho da imagem
             st.markdown(f"""
                 <div style='text-align: center;'>
-                    <p><b style='color: #ffffff;'>{nomes[i]}</b></p>
-                    <p style='color: #bbbbbb;'>Engenharia Eletrônica - {periodos[i]} Período</p>
-                    <p style='color: #bbbbbb;'>{emails[i]}</p>
-                    <p style='color: #bbbbbb;'>{telefones[i]}</p>
+                    <img src='{imagens[i]}' style='width: 150px; border-radius: 10px; margin-bottom: 10px;' />
+                    <p><b style='color: #ffffff; font-size: 18px;'>{nomes[i]}</b></p>
+                    <p style='color: #bbbbbb; font-size: 16px;'>Engenharia Eletrônica - {periodos[i]} Período</p>
+                    <p style='color: #bbbbbb; font-size: 14px;'>{emails[i]}</p>
+                    <p style='color: #bbbbbb; font-size: 14px;'>{telefones[i]}</p>
                 </div>
             """, unsafe_allow_html=True)
     
     # 🔥 Bloco de informações com contraste melhorado
     st.markdown("""
-    <div class="info-box">
-        <h2>O Processo de Criação</h2>
-        <p>Desenvolvido com Streamlit e integrado ao GitHub para versionamento e colaboração. Interface estilizada com HTML/CSS personalizados.</p>
+    <div style="
+        background-color: #1e1e1e; 
+        padding: 20px; 
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+        margin-top: 20px;
+    ">
+        <h2 style="color: #ffffff;">O Processo de Criação</h2>
+        <p style="color: #bbbbbb;">Desenvolvido com Streamlit e integrado ao GitHub para versionamento e colaboração. Interface estilizada com HTML/CSS personalizados.</p>
     </div>
     """, unsafe_allow_html=True)
+
 
 # ✅ ABA PROJETOS
 with tabs[1]:
