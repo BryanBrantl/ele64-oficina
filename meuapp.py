@@ -3,7 +3,7 @@ import streamlit as st
 # 🔧 Configuração da página
 st.set_page_config(page_title="Projeto BioMove", layout="wide")
 
-# 🎨 Estilização com CSS customizado
+# 🎨 Estilização com CSS customizado.
 st.markdown("""
 <style>
     body {
