@@ -3,7 +3,7 @@ import streamlit as st
 # 🔧 Configuração da página
 st.set_page_config(page_title="Projeto BioMove", layout="wide")
 
-# 🎨 Estilização com CSS customizado.
+# 🎨 Estilização com CSS customizado
 st.markdown("""
 <style>
     body {
@@ -58,11 +58,12 @@ abas = st.tabs(["Home", "BioMove", "Atualização Semanal", "Relatórios", "Cron
 with abas[0]:
     st.markdown("""<h1>Home</h1>""", unsafe_allow_html=True)
 
-    # 👤 Perfis dos integrantes
+    # 👤 Perfis dos integrantes com imagens personalizadas
     colunas = st.columns(4)
-    for col in colunas:
+    fotos = ["image/foto1.png", "image/foto2.png", "image/foto3.png", "image/foto4.png"]
+    for col, foto in zip(colunas, fotos):
         with col:
-            st.image("image/user_icon.png", width=100)
+            st.image(foto, width=100)
             st.markdown("""
                 <div style='text-align: center;'>
                     <p><b>Nome completo</b></p>
@@ -89,7 +90,7 @@ with abas[0]:
     with col4:
         st.image("image/gif2.gif", caption="GIF 2", use_column_width=True)
 
-    # 🔁 Mais conteúdo fictício
+    # 🔀 Mais conteúdo fictício
     st.markdown("""
         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed urna amet.</p>
         <p>Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisi malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
@@ -99,7 +100,7 @@ with abas[0]:
 with abas[1]:
     st.markdown("""<h1>BioMove</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel augue sed arcu tincidunt fermentum. Duis at ligula sed purus faucibus porttitor.</p>""", unsafe_allow_html=True)
 
-# 📝 ABA Atualização Semanal
+# 📜 ABA Atualização Semanal
 with abas[2]:
     st.markdown("""<h1>Atualização Semanal</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim luctus orci at iaculis.</p>""", unsafe_allow_html=True)
 
