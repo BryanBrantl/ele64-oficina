@@ -7,7 +7,7 @@ st.set_page_config(page_title="Projeto BioMove", layout="wide")
 st.markdown("""
 <style>
     body {
-        background-color: #121212;
+        background-color: #000000;
         color: #ffffff;
     }
     .nav-bar {
