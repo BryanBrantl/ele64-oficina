@@ -1,64 +1,112 @@
 import streamlit as st
 
-# Título principal
-st.title("Projeto - Carrinho Controlado por EMG")
+# 🔧 Configuração da página
+st.set_page_config(page_title="Projeto BioMove", layout="wide")
 
-# Abas principais
-tab_resumo, tab_cronograma, tab_sobre = st.tabs(["Resumo", "Cronograma", "Sobre"])
+# 🎨 Estilização com CSS customizado
+st.markdown("""
+<style>
+    body {
+        background-color: #121212;
+        color: #ffffff;
+    }
+    .nav-bar {
+        display: flex;
+        justify-content: space-around;
+        background-color: #1e1e1e;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .nav-item {
+        padding: 10px 20px;
+        border-radius: 8px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: #444;
+    }
+    .nav-item:hover {
+        background-color: #666;
+    }
+    .nav-active {
+        background-color: #ff4b4b;
+    }
+    h1, h2, h3 {
+        text-align: center;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    p, li {
+        font-size: 16px;
+        color: #bbbbbb;
+    }
+    .main-content {
+        background-color: #1e1e1e;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+        margin-top: 20px;
+    }
+</style>
+""", unsafe_allow_html=True)
 
-# Aba: Resumo (exemplo simples)
-with tab_resumo:
-    st.header("Resumo do Projeto")
-    st.write("""
-        Este projeto tem como objetivo desenvolver um carrinho controlado por sinais EMG (eletromiográficos),
-        com foco na aplicação de instrumentação biomédica e controle embarcado.
+# 📁 Criação das abas
+abas = st.tabs(["Home", "BioMove", "Atualização Semanal", "Relatórios", "Cronograma"])
+
+# 🏠 ABA HOME
+with abas[0]:
+    st.markdown("""<h1>Home</h1>""", unsafe_allow_html=True)
+
+    # 👤 Perfis dos integrantes
+    colunas = st.columns(4)
+    for col in colunas:
+        with col:
+            st.image("image/user_icon.png", width=100)
+            st.markdown("""
+                <div style='text-align: center;'>
+                    <p><b>Nome completo</b></p>
+                    <p>RA</p>
+                    <p>Período</p>
+                    <p>Contato</p>
+                </div>
+            """, unsafe_allow_html=True)
+
+    # 📄 Seções com textos e imagens/gifs
+    col1, col2 = st.columns([1, 2])
+    with col1:
+        st.image("image/gif1.gif", caption="GIF 1", use_column_width=True)
+    with col2:
+        st.markdown("""
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed urna amet.</p>
+        """)
+
+    col3, col4 = st.columns([2, 1])
+    with col3:
+        st.markdown("""
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed urna amet. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisi malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+        """)
+    with col4:
+        st.image("image/gif2.gif", caption="GIF 2", use_column_width=True)
+
+    # 🔁 Mais conteúdo fictício
+    st.markdown("""
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed urna amet.</p>
+        <p>Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisi malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
     """)
 
-# Aba: Cronograma (com HTML)
-with tab_cronograma:
-    st.header("Cronograma do Projeto – Carrinho Controlado por EMG")
+# 🔬 ABA BioMove
+with abas[1]:
+    st.markdown("""<h1>BioMove</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel augue sed arcu tincidunt fermentum. Duis at ligula sed purus faucibus porttitor.</p>""", unsafe_allow_html=True)
 
-    cronograma_html = """
-    <h3 style="color: #ff4b4b;">Entregáveis</h3>
-    <ul>
-      <li><b>11/04:</b> Entregável #1 – Plano de Projeto</li>
-      <li><b>11/04:</b> Entregável #2 – Blog do Projeto (link inicial)</li>
-      <li><b>23/05:</b> Entregável #3 – Projeto e testes de Hardware</li>
-      <li><b>04/07:</b> Entregável #4 – Projeto e testes de Software (relatório, vídeo e blog)</li>
-      <li><b>11/07:</b> Entregável #5 – Integração e Demonstração para banca</li>
-    </ul>
+# 📝 ABA Atualização Semanal
+with abas[2]:
+    st.markdown("""<h1>Atualização Semanal</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim luctus orci at iaculis.</p>""", unsafe_allow_html=True)
 
-    <h3 style="color: #ff4b4b;">Atividades</h3>
-    <table style="width:100%; border-collapse: collapse;" border="1">
-      <tr style="background-color: #333; color: white;">
-        <th>Atividade</th><th>Responsável</th><th>Início</th><th>Fim</th><th>Duração</th>
-      </tr>
-      <tr><td>Montagem do carrinho</td><td>Leonardo</td><td>08/04</td><td>10/04</td><td>2 dias</td></tr>
-      <tr><td>Projeto circuito EMG</td><td>Bryan</td><td>10/04</td><td>13/04</td><td>3 dias</td></tr>
-      <tr><td>Simulação circuito EMG</td><td>Bryan</td><td>13/04</td><td>14/04</td><td>1 dia</td></tr>
-      <tr><td>Montagem EMG protoboard</td><td>João</td><td>12/04</td><td>13/04</td><td>2 dias</td></tr>
-      <tr><td>Calibração do sinal EMG</td><td>João</td><td>13/04</td><td>14/04</td><td>1 dia</td></tr>
-      <tr><td>Montagem dos motores</td><td>Luiz</td><td>18/04</td><td>19/04</td><td>1 dia</td></tr>
-      <tr><td>Leitura do sinal EMG</td><td>Luiz</td><td>20/04</td><td>21/04</td><td>2 dias</td></tr>
-      <tr><td>Interpretação sinais EMG</td><td>Bryan</td><td>22/04</td><td>24/04</td><td>2 dias</td></tr>
-      <tr><td>Controle do carrinho</td><td>Todos</td><td>26/04</td><td>28/04</td><td>3 dias</td></tr>
-      <tr><td>Testes com voluntário</td><td>Todos</td><td>29/04</td><td>30/04</td><td>2 dias</td></tr>
-      <tr><td>Ajustes finais</td><td>Todos</td><td>01/05</td><td>02/05</td><td>2 dias</td></tr>
-    </table>
+# 📊 ABA Relatórios
+with abas[3]:
+    st.markdown("""<h1>Relatórios</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales augue at sapien tincidunt, eget tincidunt justo gravida.</p>""", unsafe_allow_html=True)
 
-    <h3 style="color: #ff4b4b; margin-top: 40px;">Resumo por Responsável</h3>
-    <ul>
-      <li><b>Leonardo:</b> 2 dias</li>
-      <li><b>Bryan:</b> 6 dias</li>
-      <li><b>João:</b> 5 dias</li>
-      <li><b>Luiz:</b> 4 dias</li>
-      <li><b>Total do Projeto:</b> 21 dias</li>
-    </ul>
-    """
-
-    st.markdown(cronograma_html, unsafe_allow_html=True)
-
-# Aba: Sobre (exemplo simples)
-with tab_sobre:
-    st.header("Sobre")
-    st.write("Aplicação desenvolvida por alunos de Engenharia Eletrônica para a disciplina de Oficina de Integração.")
+# 🗓️ ABA Cronograma
+with abas[4]:
+    st.markdown("""<h1>Cronograma</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at vehicula mauris, non ullamcorper lorem. Curabitur vitae erat velit.</p>""", unsafe_allow_html=True)
