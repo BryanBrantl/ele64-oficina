@@ -63,7 +63,7 @@ with abas[0]:
     fotos = ["image/foto_01.png", "image/foto_02.png", "image/foto_03.png", "image/foto_04.png"]
     for col, foto in zip(colunas, fotos):
         with col:
-            st.image(foto, width=100)
+            st.image(foto, width=500)
             st.markdown("""
                 <div style='text-align: center;'>
                     <p><b>Nome completo</b></p>
