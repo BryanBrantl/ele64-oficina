@@ -60,7 +60,7 @@ with abas[0]:
 
     # 👤 Perfis dos integrantes com imagens personalizadas
     colunas = st.columns(4)
-    fotos = ["image/foto1.png", "image/foto2.png", "image/foto3.png", "image/foto4.png"]
+    fotos = ["image/foto_01.png", "image/foto_02.png", "image/foto_03.png", "image/foto_04.png"]
     for col, foto in zip(colunas, fotos):
         with col:
             st.image(foto, width=100)
